@@ -1,0 +1,37 @@
+
+<div class="espacio">
+    <div class="row">
+        <div class="col" >
+            <button *ngIf="prev"  class="btn btn-success" (click)="anterior(prev)">Anterior</button>
+        </div>
+        <div class="col cen">Pagina: {{numpag}}</div>
+        <div class="col sig">
+            <button class="btn btn-success" (click)="siguiente(next)">Siguiente</button>
+        </div>
+        </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 espacio">
+
+    
+    <div class="col" *ngFor="let personaje of personajes">
+
+      <div class="card h-100" >
+        <img [src]="personaje.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{personaje.name}}</h5>
+          <p class="card-text">Especie: {{personaje.species}}</p>
+          <button type="button" class="btn btn-outline-primary btn-block"
+         (click)="ve(personaje.id)"
+          >
+            Más Información
+            </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Estado: {{personaje.status}}</small>
+        </div>
+      </div>
+
+    </div>
+   
+  </div>
