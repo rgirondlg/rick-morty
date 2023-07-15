@@ -1,0 +1,68 @@
+<app-paginado></app-paginado>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 espacio">
+
+    
+    <div class="col" *ngFor="let personaje of personajes">
+        <ng-container *ngIf="personaje.status=='Alive'">
+            <div class="card h-100" >
+                <img [src]="personaje.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{personaje.name}}</h5>
+                  <p class="card-text">Especie: {{personaje.species}}</p>
+                  <button type="button" class="btn btn-outline-primary btn-block"
+                 (click)="ve(personaje.id)"
+                  >
+                    Más Información
+                    </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Estado: {{personaje.status}}</small>
+                </div>
+              </div>
+
+        </ng-container>
+        <ng-container *ngIf="personaje.status=='Dead'">
+            <div class="card h-100" style="background-color: rgba(255, 0, 0, 0.563);">
+                <img [src]="personaje.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{personaje.name}}</h5>
+                  <p class="card-text">Especie: {{personaje.species}}</p>
+                  <button type="button" class="btn btn-outline-primary btn-block"
+                 (click)="ve(personaje.id)"
+                  >
+                    Más Información
+                    </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Estado: {{personaje.status}}</small>
+                </div>
+              </div>
+
+        </ng-container>
+        <ng-container *ngIf="personaje.status=='unknown'">
+            <div class="card h-100" style="background-color: rgba(255, 251, 0, 0.563);">
+                <img [src]="personaje.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{personaje.name}}</h5>
+                  <p class="card-text">Especie: {{personaje.species}}</p>
+                  <button type="button" class="btn btn-outline-primary btn-block"
+                 (click)="ve(personaje.id)"
+                  >
+                    Más Información
+                    </button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Estado: {{personaje.status}}</small>
+                </div>
+              </div>
+
+        </ng-container>
+     
+
+    </div>
+    
+   
+  </div>
+
+  <app-paginado></app-paginado>

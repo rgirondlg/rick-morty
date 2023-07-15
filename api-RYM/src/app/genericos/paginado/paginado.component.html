@@ -1,0 +1,12 @@
+<hr>
+
+<div class="row">
+    <div class="col-sm-4 " >
+        <button *ngIf="prev"  class="btn btn-success" (click)="anterior()">Anterior</button>
+    </div>
+    <div class="col-sm-4 text-center">Pagina: {{numpag}}</div>
+    <div class="col-sm-4 ">
+        <button class="btn btn-success" (click)="siguiente(next)">Siguiente</button>
+    </div>
+</div>
+<hr>
